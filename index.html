@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Snake Game (Kamrul Hasan)</h1>
+            <div class="score-display">
+                <span id="score">0</span>
+                <span class="score-separator">/</span>
+                <span id="high-score">0</span>
+            </div>
+        </header>
+        
+        <div class="game-board-container">
+            <canvas id="game-board"></canvas>
+            <div class="game-overlay" id="game-overlay">
+                <div class="overlay-content">
+                    <h2 id="overlay-title">Snake Game</h2>
+                    <p id="overlay-message">Use arrow keys to start</p>
+                    <button id="start-button" class="btn-primary">Start Game</button>
+                    <div class="controls-info">
+                        <div class="control-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <i class="fas fa-arrow-down"></i>
+                            <i class="fas fa-arrow-left"></i>
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Move Snake</span>
+                        </div>
+                        <div class="control-item">
+                            <i class="fas fa-space-shuttle"></i>
+                            <span>Pause Game</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="pause-button" class="btn-secondary" disabled>
+                <i class="fas fa-pause"></i> Pause
+            </button>
+            <button id="restart-button" class="btn-secondary">
+                <i class="fas fa-redo"></i> Restart
+            </button>
+            <div class="difficulty-selector">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
